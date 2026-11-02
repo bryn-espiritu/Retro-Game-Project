@@ -1,0 +1,6 @@
+{
+  "name": "Verdant Depths: Dungeon & Harvest",
+  "description": "A 16-bit retro pixel-art dungeon crawler and farming simulation. Cultivate magical crops on your farmstead to craft powerful combat buffs, then survive perilous procedural dungeon depths with real-time sword, bow, and dodge mechanics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
