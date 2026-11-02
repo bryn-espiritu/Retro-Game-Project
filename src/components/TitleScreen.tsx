@@ -151,10 +151,13 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({ onStart, isMuted, onTo
         </span>
       </div>
 
-      {/* Bottom Flat Control Hint Line */}
-      <div className="relative z-10 text-center border-t border-slate-800/80 pt-4">
+      {/* Bottom Flat Control Hint Line & Credits */}
+      <div className="relative z-10 flex flex-col items-center gap-2 border-t border-slate-800/80 pt-4 text-center">
         <p className="text-[11px] md:text-xs font-mono text-slate-400 tracking-wide">
           WASD Move · Click / Space Action · Right-Click / Shift Dodge · E Interact · 1-5 Hotbar · Esc Pause
+        </p>
+        <p className="text-[10px] md:text-[11px] font-pixel-sm text-slate-500 tracking-wider">
+          Created by <span className="text-emerald-400 font-semibold">Bryn Espiritu</span> · Built with <span className="text-amber-400 font-semibold">Google AI Studio</span>
         </p>
       </div>
     </div>

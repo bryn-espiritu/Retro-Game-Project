@@ -72,6 +72,12 @@ export const PauseModal: React.FC<ModalProps> = ({ engine, isMuted, onToggleMute
             <li>• <strong className="text-slate-200">1 - 5:</strong> Select Hotbar slot</li>
           </ul>
         </div>
+
+        <div className="w-full text-center mt-4 pt-3 border-t border-slate-800">
+          <p className="text-[10px] font-pixel-sm text-slate-500 tracking-wide">
+            Created by <span className="text-emerald-400 font-semibold">Bryn Espiritu</span> · Built with <span className="text-amber-400 font-semibold">Google AI Studio</span>
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -162,6 +168,10 @@ export const VictoryModal: React.FC<ModalProps> = ({ engine, onReturnToFarm }) =
           <Home className="w-4 h-4" />
           <span>RETURN TRIUMPHANT TO FARM</span>
         </button>
+
+        <p className="text-[10px] font-pixel-sm text-slate-500 mt-4 tracking-wide">
+          Created by <span className="text-emerald-400 font-semibold">Bryn Espiritu</span> · Built with <span className="text-amber-400 font-semibold">Google AI Studio</span>
+        </p>
       </div>
     </div>
   );
