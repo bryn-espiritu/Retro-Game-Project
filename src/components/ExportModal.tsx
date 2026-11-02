@@ -12,6 +12,26 @@ interface ExportModalProps {
   onClose: () => void;
 }
 
+const RetroSeedlingIcon: React.FC<{ className?: string }> = ({ className = 'w-5 h-5' }) => (
+  <svg className={className} viewBox="0 0 16 16" shapeRendering="crispEdges">
+    <rect x="3" y="14" width="10" height="2" fill="#582900" />
+    <rect x="4" y="13" width="8" height="1" fill="#78350f" />
+    <rect x="6" y="12" width="4" height="1" fill="#92400e" />
+    <rect x="7" y="8" width="2" height="5" fill="#15803d" />
+    <rect x="8" y="7" width="1" height="2" fill="#16a34a" />
+    <rect x="4" y="6" width="3" height="2" fill="#16a34a" />
+    <rect x="3" y="5" width="3" height="2" fill="#22c55e" />
+    <rect x="2" y="4" width="3" height="2" fill="#4ade80" />
+    <rect x="3" y="3" width="2" height="1" fill="#86efac" />
+    <rect x="9" y="6" width="3" height="2" fill="#15803d" />
+    <rect x="10" y="5" width="3" height="2" fill="#16a34a" />
+    <rect x="11" y="4" width="3" height="2" fill="#22c55e" />
+    <rect x="11" y="3" width="2" height="1" fill="#4ade80" />
+    <rect x="7" y="4" width="2" height="3" fill="#facc15" />
+    <rect x="7" y="3" width="2" height="1" fill="#fef08a" />
+  </svg>
+);
+
 export const ExportModal: React.FC<ExportModalProps> = ({ engine, onClose }) => {
   const [activeTab, setActiveTab] = useState<'standalone' | 'source' | 'save'>('standalone');
   const [copiedCode, setCopiedCode] = useState(false);
@@ -193,11 +213,11 @@ export const ExportModal: React.FC<ExportModalProps> = ({ engine, onClose }) => 
               {/* Primary Download Card */}
               <div className="bg-emerald-950/30 border border-emerald-500/40 rounded-xl p-4 flex flex-col gap-3">
                 <div className="flex items-center gap-2 text-emerald-400 font-pixel-sm text-xs">
-                  <FileCode className="w-4 h-4" />
+                  <RetroSeedlingIcon className="w-5 h-5 shrink-0" />
                   <span>Standalone Single-File Game (.html)</span>
                 </div>
                 <p className="text-slate-300 text-xs leading-relaxed">
-                  The entire game, graphics, weather simulation, and 8-bit sound synthesizers have been bundled into a single self-contained HTML file.
+                  The entire game, graphics, weather simulation, and 8-bit sound synthesizers have been bundled into a single self-contained HTML file featuring a custom retro pixel seedling icon.
                   Double-click the file on Windows, Mac, or Linux to play offline in Chrome, Safari, Edge, or Firefox!
                 </p>
 
@@ -207,7 +227,7 @@ export const ExportModal: React.FC<ExportModalProps> = ({ engine, onClose }) => 
                   disabled={isDownloading}
                   className="w-full flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-800 text-white font-pixel text-xs py-3.5 px-6 rounded-xl transition-all cursor-pointer shadow-[0_0_20px_rgba(16,185,129,0.4)]"
                 >
-                  <Download className={`w-4 h-4 ${isDownloading ? 'animate-bounce' : ''}`} />
+                  <RetroSeedlingIcon className={`w-4 h-4 shrink-0 ${isDownloading ? 'animate-bounce' : ''}`} />
                   <span>{isDownloading ? 'PREPARING OFFLINE FILE...' : 'DOWNLOAD STANDALONE GAME (.HTML)'}</span>
                 </button>
 
